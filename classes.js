@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', start)
 
 function start () {
   // The first example is done for you. Uncomment the line below and reload the browser.
-  one()
-  two()
-  three()
+  one();
     
   // Your turn! Create a new function called `two`, then call it from here.
+  two();
+  three();
+  makeVisible();
 }
 
 function one () {
@@ -37,4 +38,11 @@ function three () {
   // Next, we apply a new CSS class to it:
   three.classList.toggle('red')
 }
+
 // CREATE FUNCTION makeVisible HERE
+function makeVisible() {
+  var elements =  document.getElementsByClassName("invisible");
+  if (elements && elements.length >= 1) {
+    elements[0].classList.toggle('visible');
+  }
+}
